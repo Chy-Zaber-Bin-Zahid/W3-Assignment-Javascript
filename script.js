@@ -191,6 +191,12 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
         shareModal.style.display = 'none';
     });
+
+    document.addEventListener('click', (e) => {
+        if (shareModal.style.display === 'block' && !shareModal.contains(e.target) && e.target !== shareBtn) {
+            shareModal.style.display = 'none';
+        }
+    });
     
     // Copy link functionality
     copyLinkBtn.addEventListener('click', async () => {
