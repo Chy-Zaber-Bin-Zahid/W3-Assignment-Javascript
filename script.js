@@ -220,3 +220,92 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Modal Gallery
+const images = [
+    {
+        url: '/images/nature-1.jpg',
+        title: 'Juneau Vacation Rental | 2BR | 1BA | 1,115 Sq Ft | Stairs Required'
+    },
+    {
+        url: '/images/nature-2.jpg',
+        title: 'Lakeside View from Deck'
+    },
+    {
+        url: '/images/nature-3.jpg',
+        title: 'Mountain Vista'
+    },
+    {
+        url: '/images/nature-1.jpg',
+        title: 'Juneau Vacation Rental | 2BR | 1BA | 1,115 Sq Ft | Stairs Required'
+    },
+    {
+        url: '/images/nature-2.jpg',
+        title: 'Lakeside View from Deck'
+    },
+    {
+        url: '/images/nature-3.jpg',
+        title: 'Mountain Vista'
+    },
+];
+
+let currentImageIndex = 0;
+const modalGallery = document.getElementById('imageModal');
+const imageElement = document.querySelector('.gallery-image');
+const titleElement = document.querySelector('.image-title');
+const countElement = document.querySelector('.image-count');
+const prevButton = document.getElementById('prevBtn');
+const nextButton = document.getElementById('nextBtn');
+const openModalBtn = document.querySelector('.more-image');
+const closeModalBtn = document.getElementById('closeModalBtn');
+
+function openModal() {
+    modalGallery.style.display = 'block';
+    updateImage();
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    modalGallery.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+function updateImage() {
+    const image = images[currentImageIndex];
+    imageElement.src = image.url;
+    titleElement.textContent = image.title;
+    countElement.textContent = `${currentImageIndex + 1}/${images.length}`;
+    
+    prevButton.disabled = currentImageIndex === 0;
+    nextButton.disabled = currentImageIndex === images.length - 1;
+}
+
+function navigateImages(direction) {
+    currentImageIndex += direction;
+    if (currentImageIndex < 0) currentImageIndex = 0;
+    if (currentImageIndex >= images.length) currentImageIndex = images.length - 1;
+    updateImage();
+}
+
+openModalBtn.addEventListener('click', openModal);
+closeModalBtn.addEventListener('click', closeModal);
+prevButton.addEventListener('click', () => navigateImages(-1));
+nextButton.addEventListener('click', () => navigateImages(1));
+
+modalGallery.addEventListener('click', function(e) {
+    if (e.target === modalGallery) {
+        closeModal();
+    }
+});
+
+document.addEventListener('keydown', function(e) {
+    if (modalGallery.style.display === 'block') {
+        if (e.key === 'ArrowLeft' && currentImageIndex > 0) {
+            navigateImages(-1);
+        } else if (e.key === 'ArrowRight' && currentImageIndex < images.length - 1) {
+            navigateImages(1);
+        } else if (e.key === 'Escape') {
+            closeModal();
+        }
+    }
+});
