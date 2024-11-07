@@ -1,4 +1,4 @@
-# W3-Assignment-HTML-CSS
+# W3-Assignment-Javascript
 # Vacation Rental Property Listing Page
 
 A responsive vacation rental property listing page built with HTML and CSS, featuring a modern design and comprehensive property information display.
