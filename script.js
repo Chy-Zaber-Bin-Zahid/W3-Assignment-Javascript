@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const images = [
     {
         url: '/images/nature-1.jpg',
-        title: 'Juneau Vacation Rental | 2BR | 1BA | 1,115 Sq Ft | Stairs Required'
+        title: 'Juneau Vacation Rental'
     },
     {
         url: '/images/nature-2.jpg',
@@ -243,7 +243,7 @@ const images = [
     },
     {
         url: '/images/nature-1.jpg',
-        title: 'Juneau Vacation Rental | 2BR | 1BA | 1,115 Sq Ft | Stairs Required'
+        title: 'Juneau Vacation Rental'
     },
     {
         url: '/images/nature-2.jpg',
