@@ -359,7 +359,8 @@
     gap: 8px;
     background: none;
     border: none;
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 500;
     color: #333;
     padding: 8px;
     border-radius: 8px;
@@ -511,6 +512,10 @@
     font-size: 14px;
 }
 
+.more-image:hover {
+    cursor: pointer;
+}
+
 .gallery-grid-responsive{
     display: none;
 }
@@ -617,7 +622,7 @@
 
 .image-title {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
 }
 
 .image-count {
@@ -692,14 +697,19 @@
     }   
 
     .more-image{
-        bottom: 13px;
+        bottom: 10px;
         right: 35px;
+    }
+
+    .image-title {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 1350px){
     .more-image{
-        bottom: 13px;
+        bottom: 14px;
+        right: 36px;
     }
 }
 
