@@ -376,10 +376,6 @@
     gap: 5px;
 }
 
-/* .btn-share{
-    position: relative;
-} */
-
 .heart{
     color: red;
     font-size: 20px;
@@ -461,6 +457,118 @@
 
 .gallery-grid-responsive{
     display: none;
+}
+
+/* Modal Gallery */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 24, 52, 0.95);
+    z-index: 1000;
+}
+
+.modal-gallery-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.modal-content-gallery {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    color: white;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    z-index: 1010;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    margin: 0 auto;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery-modal-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.nav-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    padding: 15px 17px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.nav-button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.nav-button:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.image-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.image-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.image-count {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.view-more-btn {
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 @media (max-width: 750px){
