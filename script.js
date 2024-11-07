@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Counter state
     let counts = {
         adults: 2,
-        children: 0
+        children: 1
     };
     
     // Open modal when clicking travelers input
