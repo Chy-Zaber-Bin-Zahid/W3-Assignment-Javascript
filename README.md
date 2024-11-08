@@ -47,4 +47,3 @@ The CSS implementation includes:
 1. Clone the repository
 2. Open `index.html` in your browser
 3. The CSS is linked automatically and includes all necessary styles
-# W3-Assignment-Javascript
